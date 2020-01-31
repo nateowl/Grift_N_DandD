@@ -39,7 +39,15 @@ body {
 
 
 /* set up drop zones */
-
+.drop-zone {
+	width: 49.5%;
+	height: 49.5%;
+	border: thin dashed white;
+	float: right;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+}
 
 
 /* end board styles */
@@ -59,10 +67,10 @@ header h1 {
 	margin: 10px 0
 }
 
-header p, footer p { 
-	font-size: 1.7em; 
-	letter-spacing: 2px; 
-	margin: 10px 0 
+header p, footer p {
+	font-size: 1.7em;
+	letter-spacing: 2px;
+	margin: 10px 0
 }
 
 footer {
