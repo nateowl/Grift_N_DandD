@@ -35,6 +35,17 @@ body {
 }
 
 /* arrange the puzzle pieces on the board */
+.tl, .bl { text-align: right;}
+.tl img { bottom: 0; }
+.tr img { bottom: 0; right: 0; }
+.br img { right: 0; }
+
+.drop-zone img {
+	width: auto !important;
+	padding: 0 !important;
+	cursor: default;
+	position: absolute;
+}
 
 
 

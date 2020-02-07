@@ -14,12 +14,14 @@
 		//change the thumbnail images on the left to match the button images
 		//make sure you index your images - makes it a lot easier to work with
 		pieces.forEach((piece, index) => {
+
 			puzzlePiece[index].src=`images/${piece + this.dataset.puzzleindex}.jpg`;
 			puzzlePiece[index].id=`${piece + this.dataset.puzzleindex}`;
 		});
 		//set a background image on the drop xone container
 		//style.backgroud to mutate the background
 		puzzleBoard.style.backgroundImage =`url(images/backGround${this.dataset.puzzleindex}.jpg)`
+
 	}
 
 	//another loop - adding an event listener to the pulle piece
@@ -34,11 +36,16 @@
 		console.log("You dragged something to me");
 	}
 	function allowDrop(event) {
-		console.log("you dropped something on me")
 
+		if (!this.hasChildNodes()) {
+		console.log("you dropped something on me")
+		console.log(this)
 		let currentPiece = event.dataTransfer.getData("text/plain");
 		event.target.appendChild(document.querySelector(`#${currentPiece}`));
 	}
+	}
+
+
 	// add some event handling for the new navButtons
 	navButton.forEach(button => button.addEventListener("click", changeImageSet))
 
