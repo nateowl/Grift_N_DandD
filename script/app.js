@@ -14,7 +14,7 @@
 		//change the thumbnail images on the left to match the button images
 		//make sure you index your images - makes it a lot easier to work with
 		pieces.forEach((piece, index) => {
-
+			document.querySelector(".puzzle-pieces").appendChild(puzzlePiece[index]);
 			puzzlePiece[index].src=`images/${piece + this.dataset.puzzleindex}.jpg`;
 			puzzlePiece[index].id=`${piece + this.dataset.puzzleindex}`;
 		});
